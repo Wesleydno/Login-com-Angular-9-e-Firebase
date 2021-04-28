@@ -28,8 +28,8 @@ export class ThemeService {
   }
 
   private setColorTheme(theme){
-  this.colorTheme = theme;
-  localStorage.setItem('user-theme',theme);
+    this.colorTheme = theme;
+    localStorage.setItem('user-theme',theme);
   }
 
   private getColorTheme(){
