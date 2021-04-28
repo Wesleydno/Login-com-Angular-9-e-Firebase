@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LandingComponent } from './landing.component';
+import { ThemeComponent } from './theme.component';
 
-describe('LandingComponent', () => {
-  let component: LandingComponent;
-  let fixture: ComponentFixture<LandingComponent>;
+describe('ThemeComponent', () => {
+  let component: ThemeComponent;
+  let fixture: ComponentFixture<ThemeComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ LandingComponent ]
+      declarations: [ ThemeComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(LandingComponent);
+    fixture = TestBed.createComponent(ThemeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
