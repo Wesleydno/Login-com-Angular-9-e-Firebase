@@ -1,1 +1,44 @@
-<p>login works!</p>
+<div class="full-page">
+  <mat-spinner *ngIf="showSpinner"></mat-spinner>
+  <mat-card class="login-card" *ngIf="showFormLogin">
+    <mat-card-title>LOGIN</mat-card-title>
+    <mat-card-subtitle>Seja bem vindo, sinta-se em casa!</mat-card-subtitle>
+    <mat-card-content>
+      <form [formGroup]="fGroup" novalidate>
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+       <mat-icon matSuffix>email</mat-icon>
+        <input matInput type="email" placeholder="Email" formControlName="email" />
+        <mat-error *ngIf="fGroup.controls.email.errors">
+        <span *ngIf="fGroup.controls.email.errors.required">Informe seu email</span>
+        <span *ngIf="fGroup.controls.email.errors.pattern">Informe um email válido</span>
+      </mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Senha</mat-label>
+        <input matInput [type]="hide ? 'password' : 'text'" placeholder="Password" formControlName="password" />
+        <mat-icon class="pass" matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        <mat-error *ngIf="fGroup.controls.password.errors">
+          <span *ngIf="fGroup.controls.password.errors.required">A senha deve ser informada</span>
+          <span *ngIf="fGroup.controls.password.errors.minlength">A senha deve ter no mínimo 6 caracteres</span>
+        </mat-error>
+      </mat-form-field>
+      </form>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" class="login-field" [disabled]="!fGroup.valid" (click)="ngOnSubmit()">
+        Login
+      </button>
+    </mat-card-actions>
+
+    <mat-card-footer>
+     <div class="create-account">
+      <a [routerLink]="['/register']">Crie sua conta</a>
+     </div>
+     <div class="forgot-password">
+      <a [routerLink]="['/reset-password']">Esqueceu sua senha?</a>
+     </div>
+    </mat-card-footer>
+
+  </mat-card>
+</div>
