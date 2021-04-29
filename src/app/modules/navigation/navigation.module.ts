@@ -12,7 +12,9 @@ import { MatListModule } from '@angular/material/list';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { RouterModule } from '@angular/router';
 import { ThemeComponent } from 'src/app/shared/theme/theme.component';
 
 import { DashboardComponent } from './components/dashboard/dashboard.component';
@@ -38,7 +40,10 @@ import { NavigationRoutingModule } from './navigation-routing.module';
     MatButtonToggleModule,
     MatToolbarModule,
     MatSidenavModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    RouterModule,
+    MatListModule,
+    MatSnackBarModule
   ]
 })
 export class NavigationModule { }

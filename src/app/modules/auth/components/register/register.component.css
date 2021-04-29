@@ -1,0 +1,66 @@
+.full-page{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow:hidden;
+}
+
+.register-card {
+  margin: auto;
+  width: 350px;
+}
+
+.register-field {
+  width: 100%;
+  height: 45px;
+}
+
+mat-spinner {
+  margin: auto;
+  width: 300px;
+}
+
+mat-form-field {
+    width: 100%;
+}
+
+.show-hidde-password {
+  cursor: pointer;
+}
+
+
+mat-card-actions{
+  margin: 0;
+}
+
+mat-card-footer{
+display: flex;
+flex-direction: row;
+margin: 10px 0px;
+}
+
+mat-card-title {
+  text-align: center;
+  font-weight: 200;
+  font-size: 2em;
+  margin-top: 10px;
+}
+
+mat-card-subtitle {
+  text-align: center;
+}
+
+mat-card-content{
+  margin: 0;
+}
+
+.create-account a {
+  text-decoration: none;
+  font-weight: 100;
+  background-color: transparent;
+}
+
+
+
+

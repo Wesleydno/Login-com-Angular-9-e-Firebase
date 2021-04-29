@@ -1,1 +1,64 @@
-<p>register works!</p>
+<div class="full-page">
+  <mat-spinner *ngIf="showSpinner"></mat-spinner>
+  <mat-card class="register-card" *ngIf="showFormRegister">
+    <mat-card-title>Novo Usuário</mat-card-title>
+    <mat-card-subtitle>Seja bem vindo!</mat-card-subtitle>
+  <mat-card-content>
+    <form [formGroup]="fGroup" novalidate>
+      <mat-form-field appearance="outline">
+        <mat-label>Nome</mat-label>
+        <input matInput type="text" placeholder="Nome" formControlName="name"/>
+        <mat-icon matSuffix>person</mat-icon>
+        <mat-error *ngIf="fGroup.controls.name.errors">
+          <span *ngIf="fGroup.controls.name.errors.required">Informe seu nome</span>
+          <span *ngIf="fGroup.controls.name.errors.minlength">O nome deve ter no mínimo 3 caracteres</span>
+          <span *ngIf="fGroup.controls.name.errors.maxlength">O nome deve ter no máximo 25 caracteres</span>
+          <span *ngIf="fGroup.controls.name.errors.pattern">Informe um nome válido</span>
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <mat-icon matSuffix>email</mat-icon>
+        <input matInput type="email" placeholder="Email" formControlName="email" />
+        <mat-error *ngIf="fGroup.controls.email.errors">
+          <span *ngIf="fGroup.controls.email.errors.required">Informe seu email</span>
+          <span *ngIf="fGroup.controls.email.errors.pattern">Informe um email válido</span>
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Senha</mat-label>
+        <input matInput type="password" placeholder="Password" formControlName="password" />
+        <mat-icon matSuffix class="show-hidde-password">visibility_off</mat-icon>
+        <mat-error *ngIf="fGroup.controls.password.errors">
+          <span *ngIf="fGroup.controls.password.errors.required">A senha deve ser informada</span>
+          <span *ngIf="fGroup.controls.password.errors.minlength">A senha deve ter no mínimo 6 caracteres</span>
+          <span *ngIf="fGroup.controls.password.errors.maxlength">A senha deve ter no máximo 25 caracteres</span>
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Confirme a Senha</mat-label>
+        <input matInput type="password" placeholder="Confirme a Password" formControlName="confirmPassword" />
+        <mat-error *ngIf="fGroup.controls.confirmPassword.errors">
+          <span *ngIf="fGroup.controls.confirmPassword.errors.required">A senha deve ser informada</span>
+          <span *ngIf="fGroup.controls.confirmPassword.errors.minlength">A senha deve ter no mínimo 6 caracteres</span>
+          <span *ngIf="fGroup.controls.confirmPassword.errors.maxlength">A senha deve ter no máximo 25 caracteres</span>
+          <span *ngIf="fGroup.controls.confirmPassword.errors.mustMatch">A confirmação da senha não é válida.</span>
+        </mat-error>
+      </mat-form-field>
+    </form>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" class="register-field" (click)="ngOnSubmit()" [disabled]="!fGroup.valid">
+        Criar Conta
+      </button>
+    </mat-card-actions>
+
+    <mat-card-footer>
+     <div class="create-account">
+      Você já tem uma conta? <a [routerLink]="['/login']">Login</a>
+     </div>
+    </mat-card-footer>
+
+  </mat-card>
+</div>
+

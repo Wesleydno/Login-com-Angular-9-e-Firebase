@@ -8,6 +8,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { RouterModule } from '@angular/router';
 
 import { AuthRoutingModule } from './auth-routing.module';
 import { LoginComponent } from './components/login/login.component';
@@ -20,6 +22,7 @@ import { ResetPasswordComponent } from './components/reset-password/reset-passwo
   imports: [
     CommonModule,
     AuthRoutingModule,
+    RouterModule,
     MatProgressSpinnerModule,
     MatFormFieldModule,
     MatInputModule,
@@ -29,7 +32,8 @@ import { ResetPasswordComponent } from './components/reset-password/reset-passwo
     FormsModule,
     ReactiveFormsModule,
     MatButtonModule,
-    MatButtonToggleModule
+    MatButtonToggleModule,
+    MatSnackBarModule
   ]
 })
 export class AuthModule { }

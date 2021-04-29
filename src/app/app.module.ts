@@ -41,6 +41,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatTreeModule } from '@angular/material/tree';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RouterModule } from '@angular/router';
 import { environment } from 'src/environments/environment.dev';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -56,6 +57,7 @@ import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.co
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    RouterModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
     BrowserModule,
