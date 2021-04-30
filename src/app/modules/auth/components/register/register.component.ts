@@ -13,10 +13,10 @@ import { AuthService } from './../../../../services/auth.service';
   styleUrls: ["./register.component.css"],
 })
 export class RegisterComponent implements OnInit {
-  public fGroup: FormGroup;
-  public showSpinner = false;
-  public showFormRegister = true;
-
+  fGroup: FormGroup;
+  showSpinner: boolean;
+  showFormRegister: boolean;
+  hideNewPassword: boolean;
   user: any;
 
   constructor(
@@ -25,6 +25,9 @@ export class RegisterComponent implements OnInit {
     private snackBar: MatSnackBar,
     private fBuilder: FormBuilder
   ) {
+    this.showSpinner = false;
+    this.showFormRegister = true;
+    this.hideNewPassword = true;
     this.createForm();
   }
 

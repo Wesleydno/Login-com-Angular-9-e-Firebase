@@ -27,8 +27,10 @@
       </mat-form-field>
       <mat-form-field appearance="outline">
         <mat-label>Senha</mat-label>
-        <input matInput type="password" placeholder="Password" formControlName="password" />
-        <mat-icon matSuffix class="show-hidde-password">visibility_off</mat-icon>
+        <input matInput type="password" placeholder="Password" formControlName="password" [type] ="hideNewPassword ? 'password' : 'text'"/>
+        <mat-icon matSuffix class="show-hidde-password" (click)="hideNewPassword = !hideNewPassword">
+          {{hideNewPassword ? 'visibility_off' : 'visibility'}}
+        </mat-icon>
         <mat-error *ngIf="fGroup.controls.password.errors">
           <span *ngIf="fGroup.controls.password.errors.required">A senha deve ser informada</span>
           <span *ngIf="fGroup.controls.password.errors.minlength">A senha deve ter no mínimo 6 caracteres</span>
@@ -37,7 +39,10 @@
       </mat-form-field>
       <mat-form-field appearance="outline">
         <mat-label>Confirme a Senha</mat-label>
-        <input matInput type="password" placeholder="Confirme a Password" formControlName="confirmPassword" />
+        <input matInput type="password" placeholder="Confirme a Password" formControlName="confirmPassword" [type] ="hideNewPassword ? 'password' : 'text'"/>
+        <mat-icon matSuffix class="show-hidde-password" (click)="hideNewPassword = !hideNewPassword">
+          {{hideNewPassword ? 'visibility_off' : 'visibility'}}
+        </mat-icon>
         <mat-error *ngIf="fGroup.controls.confirmPassword.errors">
           <span *ngIf="fGroup.controls.confirmPassword.errors.required">A senha deve ser informada</span>
           <span *ngIf="fGroup.controls.confirmPassword.errors.minlength">A senha deve ter no mínimo 6 caracteres</span>
@@ -55,7 +60,7 @@
 
     <mat-card-footer>
      <div class="create-account">
-      Você já tem uma conta? <a [routerLink]="['/login']">Login</a>
+      Você já tem uma conta? <a [routerLink]="['/login']" title="Voltar a tela de login">Login</a>
      </div>
     </mat-card-footer>
 

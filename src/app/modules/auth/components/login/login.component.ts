@@ -14,16 +14,20 @@ import { AuthService } from './../../../../services/auth.service';
 export class LoginComponent implements OnInit {
 
   public fGroup: FormGroup;
-  public hide = true;
-  public showSpinner = false;
-  public showFormLogin = true;
+  hide: boolean;
+  showSpinner: boolean;
+  showFormLogin: boolean;
 
   constructor(
     private router: Router,
     private authService: AuthService,
     private snackBar: MatSnackBar,
     private fBuilder: FormBuilder
-  ) {}
+  ) {
+    this.hide = true;
+    this.showSpinner = false;
+    this.showFormLogin = true;
+  }
 
   ngOnInit() {
     this.fGroup = this.fBuilder.group({

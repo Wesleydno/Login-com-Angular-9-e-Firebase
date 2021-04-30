@@ -29,7 +29,6 @@ mat-form-field {
   cursor: pointer;
 }
 
-
 mat-card-actions{
   margin: 0;
 }
@@ -59,6 +58,7 @@ mat-card-content{
   text-decoration: none;
   font-weight: 100;
   background-color: transparent;
+  color: #0669de;
 }
 
 
