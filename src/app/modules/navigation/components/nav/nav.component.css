@@ -15,3 +15,45 @@
   top: 0;
   z-index: 1;
 }
+
+.mat-icon {
+  padding: 10px;
+}
+
+.nav-icon {
+  color: #606060;
+  margin-right: 24px;
+  padding: 0;
+}
+
+.spacer-content {
+  padding: 20px;
+}
+
+.spacer {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+mat-spinner {
+  margin: auto;
+  width: 300px;
+}
+
+.profile-card {
+  text-align: center;
+  margin: 10px;
+}
+
+mat-card-sm-image {
+  margin-bottom: 4px;
+}
+
+mat-card-title {
+  font-size: 1.1em;
+}
+
+mat-card-subtitle {
+  font-size: 0.8em;
+}

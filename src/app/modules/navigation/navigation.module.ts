@@ -9,6 +9,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from '@angular/material/list';
+import { MatMenuModule } from '@angular/material/menu';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
@@ -21,7 +22,6 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { NavComponent } from './components/nav/nav.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { NavigationRoutingModule } from './navigation-routing.module';
-
 
 @NgModule({
   declarations: [NavComponent, DashboardComponent, ProfileComponent , ThemeComponent],
@@ -43,7 +43,8 @@ import { NavigationRoutingModule } from './navigation-routing.module';
     MatSlideToggleModule,
     RouterModule,
     MatListModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatMenuModule
   ]
 })
 export class NavigationModule { }
