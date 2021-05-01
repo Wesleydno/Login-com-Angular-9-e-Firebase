@@ -1,2 +1,47 @@
-<app-theme></app-theme>
-<p>profile works!</p>
+<mat-card>
+  <mat-card-title>Editar Perfil</mat-card-title>
+  <div class="cards">
+  <div class="col-user-date">
+    <app-theme></app-theme>
+  </div>
+  <div class="col-edit-password">
+  <form *ngIf="userData as user">
+    <div class="form-group">
+      <mat-form-field appearance="outline">
+        <mat-label>Nome</mat-label>
+        <input matInput placeholder="Nome" value={{user.name}}>
+      </mat-form-field>
+    </div>
+
+    <div class="form-group">
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="Email" value={{user.email}}>
+      </mat-form-field>
+    </div>
+
+    <div class="form-group">
+      <mat-form-field appearance="outline">
+        <mat-label>Senha</mat-label>
+        <input matInput placeholder="Senha" value={{user.senha}}>
+      </mat-form-field>
+    </div>
+
+    <mat-divider></mat-divider>
+
+    <mat-card-footer>
+      <div class="form-group">
+        <mat-action-row class="input-style">
+          <button mat-flat-button color="primary">
+            <mat-icon>save</mat-icon>
+            Salvar
+          </button>
+        </mat-action-row>
+      </div>
+    </mat-card-footer>
+  </form>
+  </div>
+</div>
+
+</mat-card>
+
