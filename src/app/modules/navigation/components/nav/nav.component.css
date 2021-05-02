@@ -42,18 +42,23 @@ mat-spinner {
 }
 
 .profile-card {
-  text-align: center;
-  margin: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-mat-card-sm-image {
-  margin-bottom: 4px;
+.profile-card  img{
+  max-width: 50%;
 }
 
-mat-card-title {
+.profile-card mat-card-title {
   font-size: 1.1em;
+  margin-top: 3px;
+  margin-bottom: 0;
 }
 
-mat-card-subtitle {
+.profile-card mat-card-subtitle {
   font-size: 0.8em;
+  margin:0;
 }

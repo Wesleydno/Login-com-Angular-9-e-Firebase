@@ -4,7 +4,7 @@
   [mode]="(isHandset$ | async) ? 'over' : 'side'"
   [opened]="(isHandset$ | async) === false">
     <div class="profile-card">
-      <img mat-card-sm-image src="assets/images/user.png" [alt]="">
+      <img mat-card-sm-image src="assets/images/user.png" [alt]="user.name" [title]="user.name">
       <mat-card-title>{{user.name}}</mat-card-title>
       <mat-card-subtitle>{{user.email}}</mat-card-subtitle>
     </div>
@@ -16,7 +16,7 @@
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar color="primary">
+    <mat-toolbar>
       <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>

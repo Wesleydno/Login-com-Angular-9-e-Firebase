@@ -62,9 +62,6 @@ export class LoginComponent implements OnInit {
       this.showSpinner = false;
       this.showFormLogin = true;
       await this.openSnackBar(FirebaseError('Login', error), 'Falha');
-    } finally {
-      this.showSpinner = false;
-      this.showFormLogin = true;
     }
   }
 
