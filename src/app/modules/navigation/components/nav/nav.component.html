@@ -26,8 +26,8 @@
       <button mat-button [matMenuTriggerFor]="menu">{{user.name}}<mat-icon role="img" class="mat-icon notranslate material-icons mat-icon-no-color"
           aria-hidden="true">arrow_drop_down</mat-icon></button>
       <mat-menu #menu="matMenu">
-        <button mat-menu-item [routerLink]="['profile']">
-          <mat-icon>person</mat-icon>Editar Perfil
+        <button mat-menu-item [routerLink]="['account']">
+          <mat-icon>person</mat-icon>Perfil
         </button>
         <button mat-menu-item (click)="logout()">
           <mat-icon>power_settings_new</mat-icon>Sair

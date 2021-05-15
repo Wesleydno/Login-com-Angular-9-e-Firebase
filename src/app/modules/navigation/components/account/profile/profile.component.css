@@ -25,3 +25,13 @@ mat-card-footer{
   box-sizing: border-box;
   max-width: 50%;
 }
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px;
+}
+
+.profile-card h2 {
+  margin: 0;
+}

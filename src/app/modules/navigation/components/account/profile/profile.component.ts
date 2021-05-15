@@ -3,8 +3,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 
-import { User } from '../../../../models/user.model';
-import { AuthService } from '../../../../services/auth.service';
+import { User } from '../../../../../models/user.model';
+import { AuthService } from '../../../../../services/auth.service';
 
 @Component({
   selector: 'app-profile',

@@ -28,7 +28,6 @@ export class NavComponent implements OnInit {
     private authService: AuthService) { }
 
   ngOnInit(): void {
-    console.log(this.isHandset$);
     this.authService.user$.subscribe(data => {
       this.userData = data;
     });
