@@ -1,4 +1,5 @@
 import { Component, NgModule, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ThemeService } from 'src/app/services/theme.service';
 
 @Component({
@@ -14,11 +15,14 @@ constructor(private themeService: ThemeService) {
   this.isDarkMode = this.themeService.isDarkMode();
 }
 
-toggleDarkMode(){
-    this.isDarkMode ? this.themeService.update('light-mode') : this.themeService.update('dark-mode');
+toggleDarkMode(event?: Boolean){
+  this.isDarkMode = !this.themeService.isDarkMode();
+  console.log(this.isDarkMode)
+  this.isDarkMode ? this.themeService.update('dark-mode') : this.themeService.update('light-mode');
 }
 
 ngOnInit(): void {
+
 }
 
 }

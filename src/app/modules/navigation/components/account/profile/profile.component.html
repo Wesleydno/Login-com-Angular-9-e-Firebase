@@ -1,33 +1,36 @@
 <mat-card>
   <mat-card-title>Editar Perfil</mat-card-title>
   <div class="cards">
-  <div class="col-user-date">
+  <div class="col-user">
     <div class="profile-card">
-      <img src="assets/images/user.png">
+      <div class="profile-image">
+        <img src="assets/images/user.png">
+        <div class="btn-image">
+          <button mat-icon-button
+          matTooltip="Alterar Foto"
+          aria-label="Button that displays a tooltip when focused or hovered over">
+          <mat-icon>add_a_photo</mat-icon>
+        </button>
+        </div>
+      </div>
+
        <h2>Wesley Reis</h2>
        <label>wesleydno2011@gmail.com</label>
-       <app-theme></app-theme>
     </div>
   </div>
-  <div class="col-edit-password">
+  <div class="col-user-details">
     <mat-tab-group>
-      <mat-tab label="Informações Básicas"> Informações Básicas
+      <mat-tab label="Conta">
         <app-profile-details></app-profile-details>
-
       </mat-tab>
-      <mat-tab label="Alterar Senha"> Alterar Senha
+      <mat-tab label="Alterar Senha">
        <app-change-password></app-change-password>
-
       </mat-tab>
     </mat-tab-group>
   </div>
-
-
-
 </div>
 <mat-divider></mat-divider>
 <mat-card-footer>
 </mat-card-footer>
-
 </mat-card>
 

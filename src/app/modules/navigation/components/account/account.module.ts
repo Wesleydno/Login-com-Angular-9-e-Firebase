@@ -26,7 +26,7 @@ import { ProfileDetailsComponent } from './profile-details/profile-details.compo
 import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
-  declarations: [ProfileComponent,ChangePasswordComponent,ProfileDetailsComponent, ThemeComponent],
+  declarations: [ProfileComponent,ChangePasswordComponent,ProfileDetailsComponent],
   imports: [
     CommonModule,
     MatTabsModule,

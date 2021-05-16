@@ -1,4 +1,4 @@
-<mat-sidenav-container class="sidenav-container" *ngIf="userData as user">
+<mat-sidenav-container class="sidenav-container" *ngIf="userData as user" autosize="true">
   <mat-sidenav #drawer class="sidenav" fixedInViewport
   [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
   [mode]="(isHandset$ | async) ? 'over' : 'side'"
@@ -22,7 +22,7 @@
       </button>
       <span><p></p></span>
       <span class="spacer"></span>
-
+      <app-theme></app-theme>
       <button mat-button [matMenuTriggerFor]="menu">{{user.name}}<mat-icon role="img" class="mat-icon notranslate material-icons mat-icon-no-color"
           aria-hidden="true">arrow_drop_down</mat-icon></button>
       <mat-menu #menu="matMenu">
@@ -38,7 +38,5 @@
     <div class="spacer-content">
       <router-outlet></router-outlet>
     </div>
-
-    <!-- Add Content Here -->
   </mat-sidenav-content>
 </mat-sidenav-container>

@@ -1,1 +1,8 @@
-<mat-slide-toggle (click)="toggleDarkMode()" [(ngModel)]="isDarkMode">Dark Mode</mat-slide-toggle>
+<button mat-icon-button
+matTooltip="Mudar para tema {{ !isDarkMode ? 'Dark' : 'Light'}}"
+aria-label="Button that displays a tooltip when focused or hovered over"
+(click)="toggleDarkMode($event)"
+>
+  <mat-icon>{{!isDarkMode ? 'dark_mode' : 'light_mode'}}</mat-icon>
+</button>
+

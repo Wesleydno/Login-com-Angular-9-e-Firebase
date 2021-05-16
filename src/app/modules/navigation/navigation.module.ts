@@ -13,9 +13,9 @@ import { MatListModule } from '@angular/material/list';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatTooltipModule } from '@angular/material/tooltip';
 import { RouterModule } from '@angular/router';
 import { ThemeComponent } from 'src/app/shared/theme/theme.component';
 
@@ -25,7 +25,7 @@ import { NavComponent } from './components/nav/nav.component';
 import { NavigationRoutingModule } from './navigation-routing.module';
 
 @NgModule({
-  declarations: [NavComponent,DashboardComponent],
+  declarations: [NavComponent,DashboardComponent, ThemeComponent],
   imports: [
     CommonModule,
     NavigationRoutingModule,
@@ -41,12 +41,12 @@ import { NavigationRoutingModule } from './navigation-routing.module';
     MatButtonToggleModule,
     MatToolbarModule,
     MatSidenavModule,
-    MatSlideToggleModule,
     RouterModule,
     MatListModule,
     MatSnackBarModule,
     MatMenuModule,
     MatExpansionModule,
+    MatTooltipModule,
     AccountModule
   ]
 })
