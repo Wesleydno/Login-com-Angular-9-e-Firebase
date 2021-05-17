@@ -1,8 +1,6 @@
 <mat-sidenav-container class="sidenav-container" *ngIf="userData as user" autosize="true">
-  <mat-sidenav #drawer class="sidenav" fixedInViewport
-  [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-  [mode]="(isHandset$ | async) ? 'over' : 'side'"
-  [opened]="(isHandset$ | async) === false">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
     <div class="profile-card">
       <img mat-card-sm-image src="assets/images/user.png" [alt]="user.name" [title]="user.name">
       <mat-card-title>{{user.name}}</mat-card-title>
@@ -20,7 +18,9 @@
       <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span><p></p></span>
+      <span>
+        <p></p>
+      </span>
       <span class="spacer"></span>
       <app-theme></app-theme>
       <button mat-button [matMenuTriggerFor]="menu">{{user.name}}<mat-icon role="img" class="mat-icon notranslate material-icons mat-icon-no-color"
@@ -33,7 +33,6 @@
           <mat-icon>power_settings_new</mat-icon>Sair
         </button>
       </mat-menu>
-
     </mat-toolbar>
     <div class="spacer-content">
       <router-outlet></router-outlet>
