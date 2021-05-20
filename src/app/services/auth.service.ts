@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
-import * as firebase from 'firebase/app';
 import { Observable, of } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
 
@@ -10,13 +9,9 @@ import { User } from '../models/user.model';
 @Injectable({
   providedIn: "root",
 })
-
 export class AuthService {
   user$: Observable<any>;
-  constructor(
-    private afAuth: AngularFireAuth,
-    private afs: AngularFirestore,
-  ) {
+  constructor(private afAuth: AngularFireAuth, private afs: AngularFirestore) {
     this.user$ = this.afAuth.authState.pipe(
       switchMap((user) => {
         if (user) {
@@ -57,7 +52,9 @@ export class AuthService {
   }
 
   updateUserData(data) {
-    const userRef: AngularFirestoreDocument<User> = this.afs.doc(`users/${data.uid}`);
+    const userRef: AngularFirestoreDocument<User> = this.afs.doc(
+      `users/${data.uid}`
+    );
     return userRef.set(data, { merge: true });
   }
 
